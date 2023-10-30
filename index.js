@@ -47,17 +47,17 @@ client.once('ready', () => {
     if (bot) {
       // Check the bot's status when the bot is first ready.
       if (bot.presence.status === 'online' && !botOnline) {
-        channel.send(`<@${pingUserId}> Embotic is online!`);
+        channel.send(`The target bot is online!`);
         botOnline = true;
       }
 
       // Set an interval to check the bot's status.
       setInterval(() => {
         if (bot.presence.status === 'offline' && botOnline) {
-          channel.send(`:warning: <@${pingUserId}> Embotic is offline! :warning:`);
+          channel.send(`:warning: <@${pingUserId}> Bot is offline! :warning:`);
           botOnline = false;
         } else if (bot.presence.status === 'online' && !botOnline) {
-          channel.send(`<@${pingUserId}> Embotic is online!`);
+          channel.send(`The target bot is online!`);
           botOnline = true;
         }
       }, 5000);
