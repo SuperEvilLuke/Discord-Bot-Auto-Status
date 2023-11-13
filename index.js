@@ -12,7 +12,7 @@ const botToken = process.env['TOKEN'];
 const targetBotId = process.env['TARGET_BOT_ID'];
 const channelId = process.env['CHANNEL_ID'];
 const guildId = process.env['GUILD_ID'];
-const pingUserId = '667032603676639252'; // Replace with the user's ID to ping
+const pingUserId = process.env['PING_USER_ID'];
 
 const { Client, GatewayIntentBits } = require('discord.js');
 
